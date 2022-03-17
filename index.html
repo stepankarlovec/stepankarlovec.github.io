@@ -1,135 +1,174 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>My first three.js app</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <div class="threeContainer">
-        <div class="superBowl">
-            <h1>01100011 01101001 01110100 01101001 01101101 00100000 01101010 01100001 01101011 00100000 01101011 01100100 01111001 01100010 01111001 01100011 01101000 00100000 01101000 01110010 11000011 </h1>
+      <div class="superBowl">
+        <h1>
+          01100011 01101001 01110100 01101001 01101101 00100000 01101010
+          01100001 01101011 00100000 01101011 01100100 01111001 01100010
+          01111001 01100011 01101000 00100000 01101000 01110010 11000011
+        </h1>
+      </div>
+      <div class="initBox">
+        <div class="initDialogue">
+          <h1 id="dialogueH1">
+            Stepan Karlovec - <span id="autotyped"></span>
+          </h1>
+          <button id="tlacitko">Continue.</button>
         </div>
-        <div class="initBox">
-            <div class="initDialogue">
-                <h1 id="dialogueH1">
-                    Stepan Karlovec - web developer
-                </h1>
-                <button id="tlacitko">Continue.</button>
-            </div>
-        </div>
+      </div>
     </div>
     <div class="superPica">
-        <h1>01100011 01101001 01110100 01101001 01101101 00100000 01101010 01100001 01101011 00100000 01101011 01100100 01111001 01100010 01111001 01100011 01101000 00100000 01101000 01110010 11000011 </h1>
+      <h1>
+        01100011 01101001 01110100 01101001 01101101 00100000 01101010 01100001
+        01101011 00100000 01101011 01100100 01111001 01100010 01111001 01100011
+        01101000 00100000 01101000 01110010 11000011
+      </h1>
     </div>
     <div class="gogoJeGay">
-        <div class="trollText">
-            <div class="pi">
-            <h1>if you wanna process on this page, you have to finnish this riddle.</h1>
-            <p>What was Kyle Rittenhouse's nickname on TikTok?</p>
-            <span class="riddle">
-                <label>4DoorsMore</label>
-                <input autocomplete="false" type="text" placeholder="your answer" spellcheck="false" id="userAnswer">
-            </span>   
+      <div class="trollText">
+        <div class="pi">
+          <h1>
+            if you wanna process on this page, you have to finnish this riddle.
+          </h1>
+          <p>What was Kyle Rittenhouse's nickname on TikTok?</p>
+          <span class="riddle">
+            <label>4DoorsMore</label>
+            <input
+              autocomplete="false"
+              type="text"
+              placeholder="your answer"
+              spellcheck="false"
+              id="userAnswer"
+            />
+          </span>
         </div>
-        <p id="accessGranted">
-            &#129047;
-            access granted
-            &#129047;
-        </p>
-        </div>
+        <p id="accessGranted">&#129047; access granted &#129047;</p>
+      </div>
     </div>
     <div class="overflowChecker">
-    <div class="custom-shape-divider-top-1647513058">
-        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-            <path d="M600,112.77C268.63,112.77,0,65.52,0,7.23V120H1200V7.23C1200,65.52,931.37,112.77,600,112.77Z" class="shape-fill"></path>
+      <div class="custom-shape-divider-top-1647513058">
+        <svg
+          data-name="Layer 1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M600,112.77C268.63,112.77,0,65.52,0,7.23V120H1200V7.23C1200,65.52,931.37,112.77,600,112.77Z"
+            class="shape-fill"
+          ></path>
         </svg>
-        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-            <path d="M600,112.77C268.63,112.77,0,65.52,0,7.23V120H1200V7.23C1200,65.52,931.37,112.77,600,112.77Z" class="shape-fill"></path>
+        <svg
+          data-name="Layer 1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M600,112.77C268.63,112.77,0,65.52,0,7.23V120H1200V7.23C1200,65.52,931.37,112.77,600,112.77Z"
+            class="shape-fill"
+          ></path>
         </svg>
+      </div>
     </div>
-</div>
     <div class="skillSetSection">
-        <div class="infoText">
-            <h1>about me</h1>
-            <p>high school student building web applications..</p>
-            <p>im using various tools & languages..</p>
-            <p>hit me up on this email &#129026; <a href="mailto:karlovecstepan@gmail.com">karlovecstepan@gmail.com</a></p>
+      <div class="infoText">
+        <h1>about me</h1>
+        <p>high school student building web applications..</p>
+        <p>im using various tools & languages..</p>
+        <p>
+          hit me up on this email &#129026;
+          <a href="mailto:karlovecstepan@gmail.com">karlovecstepan@gmail.com</a>
+        </p>
+      </div>
+      <div class="skillDisplay">
+        <!-- javascript -->
+        <div class="ratingSection">
+          <label>JavaScript</label>
+          <div id="ygraph">
+            <div class="ybar ybarJS"></div>
+          </div>
         </div>
-        <div class="skillDisplay">
-            <!-- javascript -->
-            <div class="ratingSection">
-                <label>JavaScript</label>
-                <div id="ygraph">
-                    <div class="ybar ybarJS"></div>
-                </div>
-            </div>
-            <div class="ratingSection">
-                <label>PHP</label>
-                <div id="ygraph">
-                    <div class="ybar ybarPHP"></div>
-                </div>
-            </div>
-            <div class="ratingSection">
-                <label>C#</label>
-                <div id="ygraph">
-                    <div class="ybar ybarCS"></div>
-                </div>
-            </div>
-            <div class="ratingSection">
-                <label>React Native</label>
-                <div id="ygraph">
-                    <div class="ybar ybarRN"></div>
-                </div>
-            </div>
-            <div class="ratingSection">
-                <label>HTML5 - CSS3</label>
-                <div id="ygraph">
-                    <div class="ybar ybarHTML"></div>
-                </div>
-            </div>
+        <div class="ratingSection">
+          <label>PHP</label>
+          <div id="ygraph">
+            <div class="ybar ybarPHP"></div>
+          </div>
         </div>
+        <div class="ratingSection">
+          <label>C#</label>
+          <div id="ygraph">
+            <div class="ybar ybarCS"></div>
+          </div>
+        </div>
+        <div class="ratingSection">
+          <label>React Native</label>
+          <div id="ygraph">
+            <div class="ybar ybarRN"></div>
+          </div>
+        </div>
+        <div class="ratingSection">
+          <label>HTML5 - CSS3</label>
+          <div id="ygraph">
+            <div class="ybar ybarHTML"></div>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="references">
-        <div class="ref_content">
-            <h1>my references</h1>
-            <p>really good stuff there..</p>
+      <div class="ref_content">
+        <h1>my references</h1>
+        <p>really good stuff there..</p>
+      </div>
+      <div class="ex_wrapper">
+        <div class="examples">
+          <div class="ex_item">
+            <a href="#">
+              <img src="images/exampleImage.jpg" width="250" height="250" />
+            </a>
+            <a href="#">DBFG</a>
+          </div>
+          <div class="ex_item">
+            <a target="_blank" href="https://www.facebook.com/jelinkovareality">
+              <img src="images/exampleImage.jpg" width="250" height="250" />
+            </a>
+            <a target="_blank" href="https://www.facebook.com/jelinkovareality"
+              >Veronika Jelinkova</a
+            >
+          </div>
+          <div class="ex_item">
+            <a href="#">
+              <img src="images/exampleImage.jpg" width="250" height="250" />
+            </a>
+            <a href="#">SnusDB</a>
+          </div>
         </div>
-        <div class="ex_wrapper">
-            <div class="examples">
-                <div class="ex_item">
-                    <a href="#">
-                        <img src="images/exampleImage.jpg" width="250" height="250">
-                    </a>
-                    <a href="#">DBFG</a>
-                </div>
-                <div class="ex_item">
-                    <a href="#">
-                        <img src="images/exampleImage.jpg" width="250" height="250">
-                    </a>
-                    <a href="#">Veronika Jelinkova</a>
-                </div>                
-                <div class="ex_item">
-                    <a href="#">
-                        <img src="images/exampleImage.jpg" width="250" height="250">
-                    </a>
-                    <a href="#">SnusDB</a>
-                </div>
-            </div>
-        </div>
-        
+      </div>
     </div>
-<!-- JAVASCRIPT /Q/Q/Q/Q/Q/Q/Q/Q/Q/Q/Q/Q/Q/QQ//QQ//Q//QQ/Q/Q/Q/Q/Q//QQ//Q -->
-<!-- Three.js library -->
-<script src="https://threejs.org/build/three.min.js"></script>
-<!-- GLTFLoader.js source -->
-<script src="https://cdn.rawgit.com/mrdoob/three.js/master/examples/js/loaders/GLTFLoader.js"></script>
-<!-- my own script -->
-<script type="module" src="script.js"></script> 
-<!-- <script type="module" src="stolenCode.js"></script> -->
-</body>
+    <!-- JAVASCRIPT /Q/Q/Q/Q/Q/Q/Q/Q/Q/Q/Q/Q/Q/QQ//QQ//Q//QQ/Q/Q/Q/Q/Q//QQ//Q -->
+    <!-- Three.js library -->
+    <script src="https://threejs.org/build/three.min.js"></script>
+    <!-- GLTFLoader.js source -->
+    <script src="https://cdn.rawgit.com/mrdoob/three.js/master/examples/js/loaders/GLTFLoader.js"></script>
+    <!-- my own script -->
+    <script type="module" src="script.js"></script>
+    <!-- <script type="module" src="stolenCode.js"></script> -->
+  </body>
 </html>
