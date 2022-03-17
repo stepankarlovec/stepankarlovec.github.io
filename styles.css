@@ -1,0 +1,355 @@
+:root{
+    --bg-color: 100%;
+}
+body {
+    margin: 0; 
+    padding: 0;
+    font-family: 'Nanum Gothic Coding', monospace;
+    background-color: black;
+}
+a{
+    text-decoration: none;
+    background-color: rgb(118, 230, 118);
+    color: black;
+}
+a:hover{
+    background-color: black;
+    color: rgb(118, 230, 118);
+}
+.threeContainer{
+    position: relative;
+    height: 100vh;
+}
+.threeContainer canvas{
+    margin: 0; 
+    max-height: 100vh;
+    max-width: 100%;
+    padding: 0;
+   z-index: -100;
+   position: absolute;
+}
+.initBox{
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+}
+.initDialogue{
+    width: 50%;
+    position: absolute;
+    height: 30%;
+   margin-top: 45vh;
+   color: rgb(118, 230, 118);
+   text-align: center;
+   /*border: 1px solid rgb(118, 230, 118);*/
+   padding: 16px;
+}
+.initDialogue h1{
+    justify-content: center;
+    text-align: center;
+    position: absolute;
+    font-size: 2.8rem;
+}
+.animateHeader{
+    animation: colorChanger infinite 20s;
+}
+@keyframes colorChanger {
+    0%{
+        color: rgb(118, 230, 118);
+    }
+    20%{
+        color: rgb(118, 189, 230);
+    }
+    40%{
+        color: rgb(230, 228, 118);
+    }
+    60%{
+        color: rgb(230, 118, 152);
+    }
+    80%{
+        color: rgb(230, 118, 224);
+    }
+    100%{
+        color: rgb(118, 230, 118);
+    }
+}
+.initDialogue button{
+    position: absolute;
+    font-family: 'Nanum Gothic Coding', monospace;
+    font-size: 1.5rem;
+    margin-top: 10vh;
+    border: 0;
+    background-color: transparent;
+    padding: 16px;
+    text-align: center;
+    color: white;
+}
+.initDialogue button:hover{
+   color: rgb(118, 230, 118);
+}
+.fadeOut{
+    animation: fadeOut ease-out 400ms;
+    animation-fill-mode: forwards;
+}
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    } 
+    100% {
+        opacity: 0;
+    }
+}
+.superBowl{
+    position: absolute;
+    padding-top: 12px;
+    width: 100%;
+    background-color: transparent;
+    color: rgb(118, 230, 118);
+    text-align: center;
+}
+.superPica{
+    padding-bottom: 12px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background-color: transparent;
+    color: rgb(118, 230, 118);
+    text-align: center;
+}
+.gogoJeGay{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(118, 230, 118);
+}
+.trollText{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+}
+.pi{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.riddle{
+    margin-top: 16px;
+}
+.riddle label{
+    padding: 0;
+    margin-right: 0;
+}
+.riddle input{
+    font-family: 'Nanum Gothic Coding', monospace;
+    background-color: transparent;
+    text-align: center;
+}
+.riddle input:focus{
+    outline: none;  
+    background-color: transparent;
+}
+.animateSuccess{
+    animation: goCrazy infinite 600ms;
+}
+#accessGranted{
+    visibility: hidden;
+    padding-top: 50px;
+    text-align: center;
+}
+
+@keyframes goCrazy {
+    0%{
+        background-color: rgb(118, 230, 118);
+        color: black;
+    }
+    19%{
+        background-color: rgb(118, 230, 118);
+        color: black;
+    }
+    20%{
+        background-color: black;
+        color: rgb(118, 230, 118);
+    }
+    39%{
+        background-color: black;
+        color: rgb(118, 230, 118);
+    }
+    40%{
+        background-color: rgb(118, 230, 118);
+        color: black;
+    }
+    59%{
+        background-color: rgb(118, 230, 118);
+        color: black;
+    }
+    60%{
+        background-color: rgb(118, 230, 118);
+        color: black;
+        
+    }
+    79%{
+        background-color: rgb(118, 230, 118);
+        color: black;
+        
+    }
+    80%{
+        background-color: black;
+        color: rgb(118, 230, 118);
+    }
+    99%{
+        background-color: black;
+        color: rgb(118, 230, 118);
+    }
+    100%{
+        background-color: rgb(118, 230, 118);
+        color: black;
+        
+    }
+}
+.skillSetSection{
+    /* display: none; */
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    color: rgb(118, 230, 118);
+    text-align: center;
+}
+.skillSetSection h1{
+    font-size: 3rem;
+}
+.infoText{
+    padding-top: 10vh;
+}
+
+/* RATING SECTION */
+.skillDisplay{
+    margin-top: 8vh;
+}
+#ygraph{
+    margin-top: 8px;
+	height: 3vh;
+	width: 80vw;
+	border: 1px solid rgb(118, 230, 118);
+	overflow: hidden;
+}
+.ybar{
+	height: 3vh;
+	width: 0vw;
+	background-color: rgb(118, 230, 118);
+	transition: width 0.5s;
+}
+.ratingSection{
+    margin-bottom: 5vh;
+	margin-left: 10vw;
+    text-align: left;
+}
+.custom-shape-divider-top-1647513058 {
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+    display: flex;
+    width: 200%;
+}
+
+.overflowChecker{
+    
+    overflow: hidden;
+}
+
+.custom-shape-divider-top-1647513058 svg {
+    position: relative;
+    display: block;
+    width: calc(187% + 1.3px); 
+    height: 62px;
+    animation: liquidSlide 7s linear 0s infinite;
+}
+@keyframes liquidSlide {
+0%
+{
+    transform: translateX(0);
+}
+100%
+{
+    transform: translateX(100%);
+}
+}
+
+.custom-shape-divider-top-1647513058 .shape-fill {
+    fill: #76E676;
+}
+.references{
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    color: rgb(118, 230, 118);
+}
+.ref_content{
+    margin-top: 10vh;
+    margin-left: 10vw;
+}
+.ref_content h1{
+    font-size: 3rem;
+}
+.references hr{
+    border-color: rgb(118, 230, 118);
+}
+.ex_wrapper{
+    margin-top: 25vh;
+    display: flex;
+    justify-content: center;
+}
+.examples{
+    display: flex;
+    width: 60%;
+    justify-content: space-around;
+    justify-items: center;
+    flex-wrap: nowrap;
+    flex-shrink: 1;
+    align-items: center;
+}
+.ex_item{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    width: 250px;
+    filter: grayscale(100%) sepia(100%) hue-rotate(90deg);
+    box-shadow: 1px black;
+
+}
+.ex_item a{
+    background-color: transparent;
+    color: #76E676;
+}
+.ex_item img{
+    padding: 8px;
+    justify-items: center;
+    justify-content: center;
+    justify-self: center;
+    text-align: center;
+    filter: grayscale(var(--bg-color)) sepia(var(--bg-color)) hue-rotate(var(--bg-color));
+}
+.ex_item:hover{
+    --bg-color: 0%;
+        animation: changeColorFilter 1s normal ease-in-out;
+}
+@keyframes changeColorFilter{
+0%{
+    transform: scale(1);
+    /* --bg-color: 100%; */
+}
+50%{
+    transform: scale(1.1);
+    /* --bg-color: 100%; */
+}
+100%{
+    transform: scale(1);
+    /* --bg-color: 0%; */
+}
+}
