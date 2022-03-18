@@ -15,6 +15,8 @@
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="styles.css" />
+    <meta name="format-detection" content="telephone=no">
+
   </head>
   <body>
     <div class="threeContainer">
@@ -43,13 +45,13 @@
     </div>
     <div class="gogoJeGay">
       <div class="trollText">
+          <!--
         <div class="pi">
           <h1>
-            if you wanna process on this page, you have to finnish this riddle.
           </h1>
-          <p>What was Kyle Rittenhouse's nickname on TikTok?</p>
+          <p>What my name hm?</p>
           <span class="riddle">
-            <label>4DoorsMore</label>
+            <label>Stepan</label>
             <input
               autocomplete="false"
               type="text"
@@ -59,7 +61,22 @@
             />
           </span>
         </div>
-        <p id="accessGranted">&#129047; access granted &#129047;</p>
+      -->
+      <div class="pi">
+        <h1>
+        </h1>
+        <span class="riddle">
+          <label>Stepan</label>
+          <input
+            autocomplete="false"
+            type="text"
+            placeholder="your answer"
+            spellcheck="false"
+            id="userAnswer"
+          />
+        </span>
+      </div>
+        <p id="accessGranted"><a href="#skillz">&#129047; access granted &#129047;</a></p>
       </div>
     </div>
     <div class="overflowChecker">
@@ -88,7 +105,7 @@
         </svg>
       </div>
     </div>
-    <div class="skillSetSection">
+    <div class="skillSetSection" id="skillz">
       <div class="infoText">
         <h1>about me</h1>
         <p>high school student building web applications..</p>
@@ -167,6 +184,7 @@
     <script src="https://threejs.org/build/three.min.js"></script>
     <!-- GLTFLoader.js source -->
     <script src="https://cdn.rawgit.com/mrdoob/three.js/master/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://threejs.org/examples/js/controls/OrbitControls.js"></script> 
     <!-- my own script -->
     <script type="module" src="script.js"></script>
     <!-- <script type="module" src="stolenCode.js"></script> -->

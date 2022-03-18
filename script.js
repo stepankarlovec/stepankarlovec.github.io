@@ -1,5 +1,5 @@
 console.info(
-  "Hi, glad that u look to the console. They key to access the rest of this site is in the code, i believe you can find it.. 4DoorsMoreWhores.. | Currently imma avaliable for work so if u lookin for somebody.. HMU !"
+  "Hi, glad that u look to the console. | *issues to fix = { responsibility (problem with the canvas and absolute positioning xd), orbit controls in the future.. (three.js)  } | Currently imma avaliable for work so if u lookin for somebody.. HMU !"
 );
 
 // ----------------- START OF THREE JS ----------------------
@@ -12,6 +12,10 @@ const camera = new THREE.PerspectiveCamera(
   1000
 );
 const scene = new THREE.Scene();
+
+const controls = new THREE.OrbitControls( camera, renderer.domElement );
+controls.autoRotate = true;
+
 let Mesh;
 let light;
 let directionalLight;
@@ -26,6 +30,7 @@ function init() {
   renderer.setPixelRatio(window.devicePixelRatio);
   container.appendChild(renderer.domElement);
   camera.position.set(1, 1, 10);
+controls.update();
   window.addEventListener(
     "resize",
     function () {
@@ -65,9 +70,12 @@ function loadGLTF() {
 
 function animate() {
   requestAnimationFrame(animate);
+  controls.update();
+  /*
   if (Mesh && Mesh.rotation) {
     Mesh.rotation.y -= 0.005;
   }
+  */  
   renderer.render(scene, camera);
 }
 init();
@@ -83,7 +91,7 @@ document.querySelector("#tlacitko").addEventListener("click", function () {
   console.log(light.intensity);
   function lightUpRoom() {
     if (directionalLight.intensity < 0.1) {
-      console.log(directionalLight.intensity);
+      //console.log(directionalLight.intensity);
       directionalLight.intensity += 0.01;
       light.intensity += 0.1;
     } else {
@@ -96,13 +104,14 @@ document.addEventListener("keydown", (e) => {
   if (e.code == "KeyW") {
     //console.log("w");
     camera.position.x += 1;
+    controls.update();
   }
   if (e.code == "KeyS") {
     //console.log("s");
     camera.position.x -= 1;
+    controls.update();
   }
 });
-
 // ----------------- END OF THREE JS ----------------------
 
 /*
@@ -140,13 +149,16 @@ function dissapearLol(object) {
 }
 
 document.querySelector("#userAnswer").addEventListener("change", (e) => {
-  if (e.target.value.toLowerCase() == "whores") {
+  if (e.target.value.toLowerCase() == "karlovec") {
     setTimeout(() => {
       e.target.classList.add("animateSuccess");
       e.target.disabled = true;
       setTimeout(() => {
         document.querySelector("#accessGranted").style.visibility = "inherit";
+        document.querySelector(".overflowChecker").style.display = "inherit";
         document.querySelector(".skillSetSection").style.display = "inherit";
+        document.querySelector(".references").style.display = "inherit";
+
       }, 2500);
     }, 1200);
   } else {
@@ -165,17 +177,12 @@ function scrollTrigger(selector, options = {}) {
   });
 }
 function addObserver(el, options) {
-  // Check if `IntersectionObserver` is supported
   if (!("IntersectionObserver" in window)) {
-    // Simple fallback
-    // The animation/callback will be called immediately so
-    // the scroll animation doesn't happen on unsupported browsers
     if (options.cb) {
       options.cb(el);
     } else {
       entry.target.classList.add("active");
     }
-    // We don't need to execute the rest of the code
     return;
   }
   let observer = new IntersectionObserver((entries, observer) => {
@@ -192,7 +199,6 @@ function addObserver(el, options) {
   }, options);
   observer.observe(el);
 }
-// Example usages:
 scrollTrigger(".skillDisplay", {
   cb: function (el) {
     setTimeout(() => {
@@ -204,6 +210,11 @@ scrollTrigger(".skillDisplay", {
     }, 1000);
   },
 });
+scrollTrigger(".pi", {
+  cb: (el) => {
+    let typed2 = new Typed(".pi h1", { strings:["","quick quiz to test your attention <br> What is my name hm?"], typeSpeed: 50, backSpeed: 50, loop: false, showCursor: false, });
+  },
+});
 
 function typeAnimation() {
   let options = {
@@ -211,8 +222,7 @@ function typeAnimation() {
       "Web Developer",
       "Graphic Designer",
       "Music Enjoyer",
-      "Swagger",
-      "stand with ukraine",
+      "Real Madrid fan",
     ],
     typeSpeed: 150,
     backSpeed: 50,
